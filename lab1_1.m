@@ -79,6 +79,7 @@ noise = A_noise - 2*A_noise*rand(1, length(M1));
 M3 = M1 + noise;
 
 figure
+
 subplot(3, 1, 1)
 x = 0:1:length(M3) - 1;
 plot(x, M3)
