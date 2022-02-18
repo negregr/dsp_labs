@@ -1,5 +1,6 @@
 function retval = Wfun (data, r)
     data_b = [];
+    L = 2^(r - 2);
     if data ~= 0
         while data > 0
             data_b(end + 1) = mod(data, 2);
@@ -8,5 +9,5 @@ function retval = Wfun (data, r)
     else
         data_b = data;
     end
-    data_b = fliplr(data_b);
+    data_b = [zeros(1, r - length(data_b)) fliplr(data_b)];
 endfunction
